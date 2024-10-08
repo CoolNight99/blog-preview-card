@@ -34,34 +34,46 @@
       box-shadow: 5px 5px black;
       padding: 10px;
       width: 320px;
-      height: 320px;
+      height: 350px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
       background-color: hsl(0, 0%, 100%);
     }
 
-    .card p, h3 {
-      margin-top: 0.5px;
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      
     }
 
     .illustration {
-      object-fit: contain;
-      object-position: center;
+      width: 300px;
+    }
+
+    .text, .learning {
+      margin-left: 10px;
     }
 
     .learning {
       font-weight: 500;
       background-color: hsl(47, 88%, 63%);
-      padding: 5px;
       border: none;
       color: black;
       width: 65px;
+      padding: 3px;
+    }
+
+    .published, h3, .summary {
+      margin-top: -15px;
     }
 
     .published {
       color:hsl(0, 0%, 7%);
+    }
+
+    .summary {
+      color: hsl(0, 0%, 42%);
     }
 
     .author {
@@ -69,6 +81,8 @@
       align-items: center;
       justify-content: left;
       flex-direction: row;
+      font-weight: 800;
+      margin-top: -25px;
     }
 
     .author-pic {
@@ -95,14 +109,18 @@
 
 <body>
   <div class="card">
-    <img class="illustration" src="assets\images\illustration-article.svg"/>
+    <div class="container">
+      <img class="illustration" src="assets\images\illustration-article.svg"/>
+    </div>
     <p class="learning">Learning</p>
-    <p class="published">Published 21 Dec 2023</p>
-    <h3>HTML & CSS foundations</h3>
-    <p>These languages are the backbone of every website, defining structure, content, and presentation.</p>
-    <div class="author">
-      <img class="author-pic" src="assets\images\image-avatar.webp"/>
-      <p>Greg Hooper</p>
+    <div class="text">
+      <p class="published">Published 21 Dec 2023</p>
+      <h3>HTML & CSS foundations</h3>
+      <p class="summary">These languages are the backbone of every website, defining structure, content, and presentation.</p>
+      <div class="author">
+        <img class="author-pic" src="assets\images\image-avatar.webp"/>
+        <p>Greg Hooper</p>
+      </div>
     </div>
   </div>
   <div class="attribution">
