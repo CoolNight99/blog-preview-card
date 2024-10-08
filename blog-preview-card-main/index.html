@@ -1,34 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Blog preview card</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+    body {
+      height: 100vh;
+      background-color: hsl(47, 88%, 63%);
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Figtree;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    .card {
+      border: 1px solid black;
+      border-radius: 10px;
+      box-shadow: 5px 5px black;
+      padding: 10px;
+      width: 320px;
+      height: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: hsl(0, 0%, 100%);
+    }
+
+    .card p, h3 {
+      margin-top: 0.5px;
+    }
+
+    .illustration {
+      object-fit: cover;
+      object-position: center;
+      width: 150px;
+    }
+
+    .learning {
+      font-weight: 500;
+      background-color: hsl(47, 88%, 63%);
+      padding: 5px;
+      border: none;
+      color: black;
+      width: 65px;
+    }
+
+    .published {
+      color:hsl(0, 0%, 7%);
+    }
+
+    .author {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      flex-direction: row;
+    }
+
+    .author-pic {
+      width: 30px;
+      height: 30px;
+      border-radius: 15px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      right: 10px;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
-
-  Learning
-
-  Published 21 Dec 2023
-
-  HTML & CSS foundations
-
-  These languages are the backbone of every website, defining structure, content, and presentation.
-
-  Greg Hooper
-  
+  <div class="card">
+    <img class="illustration" src="assets\images\illustration-article.svg"/>
+    <p class="learning">Learning</p>
+    <p class="published">Published 21 Dec 2023</p>
+    <h3>HTML & CSS foundations</h3>
+    <p>These languages are the backbone of every website, defining structure, content, and presentation.</p>
+    <div class="author">
+      <img class="author-pic" src="assets\images\image-avatar.webp"/>
+      <p>Greg Hooper</p>
+    </div>
+  </div>
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>
+    <p>Coded by <a href="#">CoolNight99</a>.</p>
   </div>
 </body>
+
 </html>
